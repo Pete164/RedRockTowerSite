@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Red Rock Tower Ltd</title>
+<meta name="description" content="Red Rock Tower Ltd is an Irish software company. We make Bosca Expenses, the receipt scanner built for Irish sole traders, small businesses and their accountants.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://redrocktower.ie/">
+<meta property="og:title" content="Red Rock Tower Ltd">
+<meta property="og:description" content="Irish software company. Makers of Bosca Expenses.">
+<meta property="og:url" content="https://redrocktower.ie/">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --bg: #faf7f3;
+    --surface: #ffffff;
+    --text: #22201d;
+    --muted: #5f5952;
+    --line: #e6dfd6;
+    --accent: #9a3b2a;
+    --accent-ink: #ffffff;
+    --accent-soft: #f3e2dd;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17150f;
+      --surface: #201d17;
+      --text: #f1ebe3;
+      --muted: #b4aa9e;
+      --line: #342f27;
+      --accent: #d9735f;
+      --accent-ink: #1b120f;
+      --accent-soft: #3a241f;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17150f; --surface: #201d17; --text: #f1ebe3; --muted: #b4aa9e;
+    --line: #342f27; --accent: #d9735f; --accent-ink: #1b120f; --accent-soft: #3a241f;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover, a:focus-visible { text-decoration: underline; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+
+  header { padding: 28px 0 8px; }
+  .wordmark { display: flex; align-items: center; gap: 12px; color: var(--text); font-weight: 700; letter-spacing: .01em; }
+  .wordmark:hover { text-decoration: none; }
+  .mark { width: 34px; height: 34px; flex: none; }
+
+  .hero { padding: 48px 0 40px; }
+  .hero h1 { font-size: clamp(30px, 5.5vw, 46px); line-height: 1.12; margin: 0 0 16px; letter-spacing: -.015em; }
+  .hero p { font-size: 19px; color: var(--muted); max-width: 40em; margin: 0; }
+
+  section { padding: 36px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 20px; font-weight: 600; }
+
+  .product {
+    display: grid; grid-template-columns: 1fr; gap: 20px;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px;
+  }
+  @media (min-width: 640px) { .product { grid-template-columns: 220px 1fr; align-items: center; } }
+  .product img { width: 100%; max-width: 220px; height: auto; display: block; }
+  .product h3 { margin: 0 0 8px; font-size: 22px; }
+  .product p { margin: 0 0 14px; color: var(--muted); }
+  .btn {
+    display: inline-block; background: var(--accent); color: var(--accent-ink); padding: 10px 18px;
+    border-radius: 999px; font-weight: 600; font-size: 15px;
+  }
+  .btn:hover, .btn:focus-visible { text-decoration: none; filter: brightness(1.05); }
+
+  dl { display: grid; grid-template-columns: 1fr; gap: 14px 24px; margin: 0; }
+  @media (min-width: 640px) { dl { grid-template-columns: max-content 1fr; } }
+  dt { color: var(--muted); font-size: 15px; }
+  dd { margin: 0; }
+  @media (max-width: 639px) { dt { margin-bottom: -10px; } }
+
+  footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
+  footer p { margin: 0 0 8px; }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <a class="wordmark" href="/" aria-label="Red Rock Tower home">
+    <svg class="mark" viewBox="0 0 34 34" aria-hidden="true">
+      <rect x="2" y="2" width="30" height="30" rx="7" fill="var(--accent)"/>
+      <path d="M11 25V13l6-5 6 5v12h-4v-7h-4v7z" fill="var(--accent-ink)"/>
+    </svg>
+    <span>Red Rock Tower</span>
+  </a>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <h1>An Irish software company.</h1>
+    <p>Red Rock Tower Ltd builds software for small businesses in Ireland. Our first product is Bosca Expenses, a receipt scanner made for sole traders, small companies and the accountants who look after them.</p>
+  </div>
+
+  <section id="product">
+    <h2>What we make</h2>
+    <div class="product">
+      <img src="/images/bosca-logo.png" alt="Bosca Expenses" width="1781" height="367">
+      <div>
+        <h3>Bosca Expenses</h3>
+        <p>Photograph a receipt and Bosca reads the merchant, date, total, VAT and line items for you, ready for an Irish VAT return. Accountants get a web portal where their clients' receipts arrive as they are scanned.</p>
+        <a class="btn" href="https://bosca.app">Visit bosca.app</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="company">
+    <h2>Company details</h2>
+    <dl>
+      <dt>Legal name</dt><dd>Red Rock Tower Limited</dd>
+      <dt>Legal form</dt><dd>Private company limited by shares, incorporated in Ireland under the Companies Act 2014</dd>
+      <dt>Registration number</dt><dd>815834 (Companies Registration Office, Ireland)</dd>
+      <dt>Registered office</dt><dd>Unit 2, 2 Bridge Street, Athlone, Co. Westmeath, N37 F1W4, Ireland</dd>
+    </dl>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <dl>
+      <dt>Email</dt><dd><a href="mailto:info@redrocktower.ie">info@redrocktower.ie</a></dd>
+      <dt>Phone</dt><dd><a href="tel:+35312346165">+353 1 234 6165</a></dd>
+      <dt>Post</dt><dd>Red Rock Tower Ltd, Unit 2, 2 Bridge Street, Athlone, Co. Westmeath, N37 F1W4</dd>
+      <dt>Bosca support</dt><dd><a href="mailto:support@boscaexpenses.com">support@boscaexpenses.com</a></dd>
+    </dl>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Red Rock Tower Limited · Registered in Ireland · Company number 815834 · Registered office: Unit 2, 2 Bridge Street, Athlone, Co. Westmeath, N37 F1W4.</p>
+    <p>This site sets no cookies and runs no analytics scripts. It is served by Cloudflare, which keeps aggregate traffic statistics. Bosca Expenses has its own <a href="https://bosca.app/privacy">privacy policy</a> and <a href="https://bosca.app/terms">terms</a>.</p>
+  </div>
+</footer>
+</body>
+</html>
