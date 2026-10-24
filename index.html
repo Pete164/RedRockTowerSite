@@ -4,142 +4,294 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Red Rock Tower Ltd</title>
-<meta name="description" content="Red Rock Tower Ltd is an Irish software company. We make Bosca Expenses, the receipt scanner built for Irish sole traders, small businesses and their accountants.">
+<meta name="description" content="Red Rock Tower Ltd is an Irish software company based in Athlone. We make Bosca Expenses, the receipt scanner built for Irish sole traders, small businesses and their accountants.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://redrocktower.ie/">
+<meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121920" media="(prefers-color-scheme: dark)">
 <meta property="og:title" content="Red Rock Tower Ltd">
 <meta property="og:description" content="Irish software company. Makers of Bosca Expenses.">
 <meta property="og:url" content="https://redrocktower.ie/">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://redrocktower.ie/images/logo.png">
+<link rel="preload" href="/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Red Rock Tower Limited","alternateName":"Red Rock Tower Ltd","url":"https://redrocktower.ie/","logo":"https://redrocktower.ie/images/logo.png","email":"info@redrocktower.ie","telephone":"+35312346165","address":{"@type":"PostalAddress","streetAddress":"Unit 2, 2 Bridge Street","addressLocality":"Athlone","addressRegion":"Co. Westmeath","postalCode":"N37 F1W4","addressCountry":"IE"},"brand":{"@type":"Brand","name":"Bosca Expenses","url":"https://bosca.app"}}
+</script>
 <style>
+  @font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("/fonts/montserrat-latin.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Source Sans 3";
+    font-style: normal;
+    font-weight: 200 900;
+    font-display: swap;
+    src: url("/fonts/source-sans-3-latin.woff2") format("woff2");
+  }
+
   :root {
-    --bg: #faf7f3;
+    --bg: #f7f5f0;
     --surface: #ffffff;
-    --text: #22201d;
-    --muted: #5f5952;
-    --line: #e6dfd6;
-    --accent: #9a3b2a;
+    --plate: #fbfaf7;
+    --text: #1f2a35;
+    --heading: #34424f;
+    --muted: #5d6b7a;
+    --line: #e4e0d8;
+    --accent: #ac2e22;
+    --accent-hover: #93261c;
     --accent-ink: #ffffff;
-    --accent-soft: #f3e2dd;
+    --accent-soft: #f6e7e4;
+    --shadow: 0 30px 60px -32px rgba(52, 66, 79, .35);
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #17150f;
-      --surface: #201d17;
-      --text: #f1ebe3;
-      --muted: #b4aa9e;
-      --line: #342f27;
-      --accent: #d9735f;
-      --accent-ink: #1b120f;
-      --accent-soft: #3a241f;
+      --bg: #121920;
+      --surface: #1a232c;
+      --plate: #202b35;
+      --text: #e6ebf0;
+      --heading: #f1f4f7;
+      --muted: #9facb9;
+      --line: #2a3540;
+      --accent: #e2695a;
+      --accent-hover: #eb7e70;
+      --accent-ink: #1a0f0d;
+      --accent-soft: #3a2420;
+      --shadow: 0 30px 60px -32px rgba(0, 0, 0, .7);
     }
   }
   :root[data-theme="dark"] {
-    --bg: #17150f; --surface: #201d17; --text: #f1ebe3; --muted: #b4aa9e;
-    --line: #342f27; --accent: #d9735f; --accent-ink: #1b120f; --accent-soft: #3a241f;
+    --bg: #121920; --surface: #1a232c; --plate: #202b35; --text: #e6ebf0; --heading: #f1f4f7;
+    --muted: #9facb9; --line: #2a3540; --accent: #e2695a; --accent-hover: #eb7e70;
+    --accent-ink: #1a0f0d; --accent-soft: #3a2420; --shadow: 0 30px 60px -32px rgba(0, 0, 0, .7);
   }
+
   * { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
   body {
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font: 400 18px/1.6 "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  h1, h2, h3 {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--heading);
+    letter-spacing: -.015em;
+    margin: 0;
   }
   a { color: var(--accent); text-decoration: none; }
   a:hover, a:focus-visible { text-decoration: underline; }
-  .wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+  img { max-width: 100%; height: auto; display: block; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+  @media (min-width: 720px) { .wrap { padding: 0 32px; } }
 
-  header { padding: 28px 0 8px; }
-  .wordmark { display: flex; align-items: center; gap: 12px; color: var(--text); font-weight: 700; letter-spacing: .01em; }
-  .wordmark:hover { text-decoration: none; }
-  .mark { width: 34px; height: 34px; flex: none; }
+  /* Top bar */
+  .top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: saturate(140%) blur(10px); border-bottom: 1px solid var(--line); }
+  .bar { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .brand { display: flex; align-items: center; gap: 12px; color: var(--heading); font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 17px; letter-spacing: .01em; text-transform: uppercase; }
+  .brand:hover { text-decoration: none; }
+  .brand img { height: 38px; width: auto; }
+  .brand small { display: block; font-size: 10px; letter-spacing: .18em; color: var(--muted); font-weight: 600; margin-top: 1px; }
+  nav { display: flex; gap: 28px; }
+  nav a { color: var(--text); font-weight: 600; font-size: 16px; }
+  nav a:hover { color: var(--accent); text-decoration: none; }
+  @media (max-width: 519px) { nav { display: none; } }
 
-  .hero { padding: 48px 0 40px; }
-  .hero h1 { font-size: clamp(30px, 5.5vw, 46px); line-height: 1.12; margin: 0 0 16px; letter-spacing: -.015em; }
-  .hero p { font-size: 19px; color: var(--muted); max-width: 40em; margin: 0; }
+  /* Shared */
+  .kicker { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 14px; font-family: "Montserrat", sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); }
+  .kicker::before { content: ""; width: 28px; height: 3px; background: var(--accent); border-radius: 2px; }
+  h2 { font-size: clamp(26px, 3.6vw, 34px); line-height: 1.18; }
+  .lede { font-size: 20px; color: var(--muted); max-width: 34em; margin: 18px 0 0; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 22px; border-radius: 10px; font-weight: 600; font-size: 16px; line-height: 1; border: 1px solid transparent; transition: background .15s, border-color .15s, color .15s; }
+  .btn:hover, .btn:focus-visible { text-decoration: none; }
+  .btn.primary { background: var(--accent); color: var(--accent-ink); }
+  .btn.primary:hover, .btn.primary:focus-visible { background: var(--accent-hover); }
+  .btn.ghost { border-color: var(--line); color: var(--heading); background: var(--surface); }
+  .btn.ghost:hover, .btn.ghost:focus-visible { border-color: var(--heading); }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; }
+  section { padding: 72px 0; }
+  @media (max-width: 719px) { section { padding: 52px 0; } }
+  .band { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .band .card { background: var(--plate); }
 
-  section { padding: 36px 0; border-top: 1px solid var(--line); }
-  h2 { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 20px; font-weight: 600; }
+  /* Hero */
+  .hero { padding: 56px 0 72px; }
+  .hero-grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
+  @media (min-width: 860px) { .hero-grid { grid-template-columns: 1.15fr .85fr; gap: 56px; } .hero { padding: 80px 0 96px; } }
+  .hero h1 { font-size: clamp(36px, 5.4vw, 56px); line-height: 1.08; font-weight: 700; }
+  .hero h1 em { font-style: normal; color: var(--accent); }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+  .hero-art { order: -1; }
+  @media (min-width: 860px) { .hero-art { order: 0; } }
+  .plate { position: relative; background: var(--plate); border: 1px solid var(--line); border-radius: 24px; padding: 36px; box-shadow: var(--shadow); display: grid; place-items: center; overflow: hidden; }
+  .plate::before { content: ""; position: absolute; inset: auto -20% -45% -20%; height: 70%; background: radial-gradient(closest-side, var(--accent-soft), transparent 70%); opacity: .9; pointer-events: none; }
+  .plate img { position: relative; width: min(100%, 300px); }
+  @media (min-width: 860px) { .plate { padding: 48px; } .plate img { width: min(100%, 340px); } }
 
-  .product {
-    display: grid; grid-template-columns: 1fr; gap: 20px;
-    background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px;
-  }
-  @media (min-width: 640px) { .product { grid-template-columns: 220px 1fr; align-items: center; } }
-  .product img { width: 100%; max-width: 220px; height: auto; display: block; }
-  .product h3 { margin: 0 0 8px; font-size: 22px; }
-  .product p { margin: 0 0 14px; color: var(--muted); }
-  .btn {
-    display: inline-block; background: var(--accent); color: var(--accent-ink); padding: 10px 18px;
-    border-radius: 999px; font-weight: 600; font-size: 15px;
-  }
-  .btn:hover, .btn:focus-visible { text-decoration: none; filter: brightness(1.05); }
+  /* Product */
+  .product-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 36px; }
+  @media (min-width: 860px) { .product-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+  .product { padding: 32px; display: flex; flex-direction: column; justify-content: center; }
+  .product img { width: min(100%, 260px); margin-bottom: 22px; }
+  .product p { margin: 0 0 24px; color: var(--muted); }
+  .features { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+  .features li { display: grid; grid-template-columns: 44px 1fr; gap: 16px; align-items: start; padding: 20px 22px; }
+  .features svg { width: 44px; height: 44px; padding: 10px; border-radius: 12px; background: var(--accent-soft); color: var(--accent); }
+  .features h3 { font-size: 17px; margin-bottom: 4px; }
+  .features p { margin: 0; color: var(--muted); font-size: 16.5px; line-height: 1.5; }
 
-  dl { display: grid; grid-template-columns: 1fr; gap: 14px 24px; margin: 0; }
-  @media (min-width: 640px) { dl { grid-template-columns: max-content 1fr; } }
-  dt { color: var(--muted); font-size: 15px; }
-  dd { margin: 0; }
-  @media (max-width: 639px) { dt { margin-bottom: -10px; } }
+  /* Company */
+  .two-col { display: grid; grid-template-columns: 1fr; gap: 36px; align-items: start; }
+  @media (min-width: 860px) { .two-col { grid-template-columns: 1fr 1fr; gap: 56px; } }
+  .two-col > div p { color: var(--muted); margin: 18px 0 0; }
+  .facts { margin: 0; padding: 8px 28px; }
+  .facts > div { display: grid; grid-template-columns: 1fr; gap: 2px 20px; padding: 16px 0; border-top: 1px solid var(--line); }
+  .facts > div:first-child { border-top: 0; }
+  @media (min-width: 520px) { .facts > div { grid-template-columns: 160px 1fr; } }
+  .facts dt { font-family: "Montserrat", sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+  .facts dd { margin: 0; }
 
-  footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
+  /* Contact */
+  .contact-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 36px; }
+  @media (min-width: 720px) { .contact-grid { grid-template-columns: repeat(3, 1fr); } }
+  .contact-grid .card { padding: 26px; }
+  .contact-grid h3 { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+  .contact-grid .big { font-size: 20px; font-weight: 600; color: var(--heading); overflow-wrap: anywhere; }
+  .contact-grid .big:hover { color: var(--accent); }
+  .contact-grid address { font-style: normal; color: var(--text); line-height: 1.5; }
+  .support { margin: 28px 0 0; color: var(--muted); }
+
+  /* Footer */
+  footer { padding: 40px 0 48px; color: var(--muted); font-size: 15px; line-height: 1.55; }
+  .foot { display: grid; grid-template-columns: 1fr; gap: 20px; }
+  @media (min-width: 720px) { .foot { grid-template-columns: auto 1fr; gap: 32px; align-items: start; } }
+  .foot img { height: 56px; width: auto; opacity: .85; }
   footer p { margin: 0 0 8px; }
+  footer a { color: var(--heading); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
+  footer a:hover { color: var(--accent); text-decoration-color: currentColor; }
+
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
 </style>
 </head>
 <body>
-<header class="wrap">
-  <a class="wordmark" href="/" aria-label="Red Rock Tower home">
-    <svg class="mark" viewBox="0 0 34 34" aria-hidden="true">
-      <rect x="2" y="2" width="30" height="30" rx="7" fill="var(--accent)"/>
-      <path d="M11 25V13l6-5 6 5v12h-4v-7h-4v7z" fill="var(--accent-ink)"/>
-    </svg>
-    <span>Red Rock Tower</span>
-  </a>
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Red Rock Tower home">
+      <img src="/images/mark.png" alt="" width="238" height="278">
+      <span>Red Rock Tower<small>Limited · Ireland</small></span>
+    </a>
+    <nav aria-label="Sections">
+      <a href="#bosca">Bosca</a>
+      <a href="#company">Company</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<main class="wrap">
-  <div class="hero">
-    <h1>An Irish software company.</h1>
-    <p>Red Rock Tower Ltd builds software for small businesses in Ireland. Our first product is Bosca Expenses, a receipt scanner made for sole traders, small companies and the accountants who look after them.</p>
-  </div>
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="kicker">Irish software company</p>
+        <h1>Software for Irish <em>small business.</em></h1>
+        <p class="lede">Red Rock Tower is an independent software company based in Athlone, Co. Westmeath. We build practical tools for sole traders, small companies and the accountants who look after them, starting with Bosca Expenses.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://bosca.app">Explore Bosca Expenses</a>
+          <a class="btn ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="plate">
+          <picture>
+            <source srcset="/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+            <img src="/images/logo.png" alt="Red Rock Tower Ltd" width="400" height="418" fetchpriority="high">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <section id="product">
-    <h2>What we make</h2>
-    <div class="product">
-      <img src="/images/bosca-logo.png" alt="Bosca Expenses" width="1781" height="367">
-      <div>
-        <h3>Bosca Expenses</h3>
-        <p>Photograph a receipt and Bosca reads the merchant, date, total, VAT and line items for you, ready for an Irish VAT return. Accountants get a web portal where their clients' receipts arrive as they are scanned.</p>
-        <a class="btn" href="https://bosca.app">Visit bosca.app</a>
+  <section id="bosca" class="band">
+    <div class="wrap">
+      <p class="kicker">Our product</p>
+      <h2>Bosca Expenses</h2>
+      <div class="product-grid">
+        <div class="card product">
+          <img src="/images/bosca-logo.png" alt="Bosca Expenses" width="1781" height="367">
+          <p>Photograph a receipt and Bosca reads the merchant, date, total, VAT and line items for you, ready for an Irish VAT return. Accountants get a web portal where their clients' receipts arrive as they are scanned.</p>
+          <div><a class="btn primary" href="https://bosca.app">Visit bosca.app</a></div>
+        </div>
+        <ul class="features">
+          <li class="card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7V5a1 1 0 0 1 1-1h2M17 4h2a1 1 0 0 1 1 1v2M20 17v2a1 1 0 0 1-1 1h-2M7 20H5a1 1 0 0 1-1-1v-2"/><path d="M8 9h8M8 12h8M8 15h5"/></svg>
+            <div><h3>Receipt scanning</h3><p>Photos or PDFs, one at a time or in a batch. Merchant, date, totals, VAT and line items are read for you.</p></div>
+          </li>
+          <li class="card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M8 10h3M8 14h8M15 10h1"/></svg>
+            <div><h3>Built for Irish VAT</h3><p>VAT rates and classifications that match the Irish return, with a purchases analysis ready for the annual Return of Trading Details.</p></div>
+          </li>
+          <li class="card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><path d="M16 4.5a3.2 3.2 0 0 1 0 7"/><path d="M17.5 13.6A5.5 5.5 0 0 1 21 19"/></svg>
+            <div><h3>Accountant portal</h3><p>Clients' receipts land in their accountant's portal as they are scanned, with review flags and export formats for Sage, Xero, QuickBooks and FreshBooks.</p></div>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
 
   <section id="company">
-    <h2>Company details</h2>
-    <dl>
-      <dt>Legal name</dt><dd>Red Rock Tower Limited</dd>
-      <dt>Legal form</dt><dd>Private company limited by shares, incorporated in Ireland under the Companies Act 2014</dd>
-      <dt>Registration number</dt><dd>815834 (Companies Registration Office, Ireland)</dd>
-      <dt>Registered office</dt><dd>Unit 2, 2 Bridge Street, Athlone, Co. Westmeath, N37 F1W4, Ireland</dd>
-    </dl>
+    <div class="wrap two-col">
+      <div>
+        <p class="kicker">The company</p>
+        <h2>Based in Athlone. Built for Ireland.</h2>
+        <p>Red Rock Tower Limited was founded in 2026 to build software that fits how small Irish businesses actually work: Irish VAT rules, Irish accountants, and the paperwork that comes with both. We keep the company small and the products focused.</p>
+        <p>Statutory company information is published here and in the footer of every page.</p>
+      </div>
+      <dl class="facts card">
+        <div><dt>Legal name</dt><dd>Red Rock Tower Limited</dd></div>
+        <div><dt>Legal form</dt><dd>Private company limited by shares, incorporated in Ireland under the Companies Act 2014</dd></div>
+        <div><dt>Registration</dt><dd>Company number 815834, Companies Registration Office, Ireland</dd></div>
+        <div><dt>Registered office</dt><dd>Unit 2, 2 Bridge Street, Athlone, Co. Westmeath, N37 F1W4, Ireland</dd></div>
+      </dl>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <dl>
-      <dt>Email</dt><dd><a href="mailto:info@redrocktower.ie">info@redrocktower.ie</a></dd>
-      <dt>Phone</dt><dd><a href="tel:+35312346165">+353 1 234 6165</a></dd>
-      <dt>Post</dt><dd>Red Rock Tower Ltd, Unit 2, 2 Bridge Street, Athlone, Co. Westmeath, N37 F1W4</dd>
-      <dt>Bosca support</dt><dd><a href="mailto:support@boscaexpenses.com">support@boscaexpenses.com</a></dd>
-    </dl>
+  <section id="contact" class="band">
+    <div class="wrap">
+      <p class="kicker">Contact</p>
+      <h2>Talk to us</h2>
+      <div class="contact-grid">
+        <div class="card">
+          <h3>Email</h3>
+          <a class="big" href="mailto:info@redrocktower.ie">info@redrocktower.ie</a>
+        </div>
+        <div class="card">
+          <h3>Phone</h3>
+          <a class="big" href="tel:+35312346165">+353 1 234 6165</a>
+        </div>
+        <div class="card">
+          <h3>Post</h3>
+          <address>Red Rock Tower Ltd<br>Unit 2, 2 Bridge Street<br>Athlone, Co. Westmeath<br>N37 F1W4, Ireland</address>
+        </div>
+      </div>
+      <p class="support">For help with Bosca Expenses, contact <a href="mailto:support@boscaexpenses.com">support@boscaexpenses.com</a>.</p>
+    </div>
   </section>
 </main>
 
 <footer>
-  <div class="wrap">
-    <p>Red Rock Tower Limited · Registered in Ireland · Company number 815834 · Registered office: Unit 2, 2 Bridge Street, Athlone, Co. Westmeath, N37 F1W4.</p>
-    <p>This site sets no cookies and runs no analytics scripts. It is served by Cloudflare, which keeps aggregate traffic statistics. Bosca Expenses has its own <a href="https://bosca.app/privacy">privacy policy</a> and <a href="https://bosca.app/terms">terms</a>.</p>
+  <div class="wrap foot">
+    <img src="/images/mark.png" alt="" width="238" height="278">
+    <div>
+      <p>© 2026 Red Rock Tower Limited. Registered in Ireland, company number 815834. Registered office: Unit 2, 2 Bridge Street, Athlone, Co. Westmeath, N37 F1W4.</p>
+      <p>This site sets no cookies and runs no analytics scripts. It is served by Cloudflare, which keeps aggregate traffic statistics. Bosca Expenses has its own <a href="https://bosca.app/privacy">privacy policy</a> and <a href="https://bosca.app/terms">terms</a>.</p>
+    </div>
   </div>
 </footer>
 </body>
