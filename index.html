@@ -13,11 +13,13 @@
 <meta property="og:description" content="Irish software company. Makers of Bosca Expenses.">
 <meta property="og:url" content="https://redrocktower.ie/">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://redrocktower.ie/images/logo.png">
+<meta property="og:image" content="https://redrocktower.ie/images/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <link rel="preload" href="/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"Red Rock Tower Limited","alternateName":"Red Rock Tower Ltd","url":"https://redrocktower.ie/","logo":"https://redrocktower.ie/images/logo.png","email":"info@redrocktower.ie","telephone":"+35312346165","address":{"@type":"PostalAddress","streetAddress":"Unit 2, 2 Bridge Street","addressLocality":"Athlone","addressRegion":"Co. Westmeath","postalCode":"N37 F1W4","addressCountry":"IE"},"brand":{"@type":"Brand","name":"Bosca Expenses","url":"https://bosca.app"}}
+{"@context":"https://schema.org","@type":"Organization","name":"Red Rock Tower Limited","alternateName":"Red Rock Tower Ltd","url":"https://redrocktower.ie/","logo":"https://redrocktower.ie/images/logo.svg","email":"info@redrocktower.ie","telephone":"+35312346165","address":{"@type":"PostalAddress","streetAddress":"Unit 2, 2 Bridge Street","addressLocality":"Athlone","addressRegion":"Co. Westmeath","postalCode":"N37 F1W4","addressCountry":"IE"},"brand":{"@type":"Brand","name":"Bosca Expenses","url":"https://bosca.app"}}
 </script>
 <style>
   @font-face {
@@ -96,7 +98,7 @@
   .bar { display: flex; align-items: center; justify-content: space-between; height: 68px; }
   .brand { display: flex; align-items: center; gap: 12px; color: var(--heading); font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 17px; letter-spacing: .01em; text-transform: uppercase; }
   .brand:hover { text-decoration: none; }
-  .brand img { height: 38px; width: auto; }
+  .brand img { height: 40px; width: 40px; }
   .brand small { display: block; font-size: 10px; letter-spacing: .18em; color: var(--muted); font-weight: 600; margin-top: 1px; }
   nav { display: flex; gap: 28px; }
   nav a { color: var(--text); font-weight: 600; font-size: 16px; }
@@ -129,10 +131,10 @@
   .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
   .hero-art { order: -1; }
   @media (min-width: 860px) { .hero-art { order: 0; } }
-  .plate { position: relative; background: var(--plate); border: 1px solid var(--line); border-radius: 24px; padding: 36px; box-shadow: var(--shadow); display: grid; place-items: center; overflow: hidden; }
-  .plate::before { content: ""; position: absolute; inset: auto -20% -45% -20%; height: 70%; background: radial-gradient(closest-side, var(--accent-soft), transparent 70%); opacity: .9; pointer-events: none; }
-  .plate img { position: relative; width: min(100%, 300px); }
-  @media (min-width: 860px) { .plate { padding: 48px; } .plate img { width: min(100%, 340px); } }
+  /* The logo keeps its own paper background in both colour schemes, so the plate is always paper. */
+  .plate { position: relative; background: #f8f8f6; border: 1px solid var(--line); border-radius: 24px; padding: 28px; box-shadow: var(--shadow); display: grid; place-items: center; overflow: hidden; }
+  .plate img { position: relative; width: min(100%, 320px); }
+  @media (min-width: 860px) { .plate { padding: 40px; } .plate img { width: min(100%, 360px); } }
 
   /* Product */
   .product-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 36px; }
@@ -171,7 +173,7 @@
   footer { padding: 40px 0 48px; color: var(--muted); font-size: 15px; line-height: 1.55; }
   .foot { display: grid; grid-template-columns: 1fr; gap: 20px; }
   @media (min-width: 720px) { .foot { grid-template-columns: auto 1fr; gap: 32px; align-items: start; } }
-  .foot img { height: 56px; width: auto; opacity: .85; }
+  .foot img { height: 56px; width: 56px; opacity: .9; }
   footer p { margin: 0 0 8px; }
   footer a { color: var(--heading); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
   footer a:hover { color: var(--accent); text-decoration-color: currentColor; }
@@ -183,7 +185,7 @@
 <header class="top">
   <div class="wrap bar">
     <a class="brand" href="/" aria-label="Red Rock Tower home">
-      <img src="/images/mark.png" alt="" width="238" height="278">
+      <img src="/images/mark.svg" alt="" width="40" height="40">
       <span>Red Rock Tower<small>Limited · Ireland</small></span>
     </a>
     <nav aria-label="Sections">
@@ -208,10 +210,7 @@
       </div>
       <div class="hero-art">
         <div class="plate">
-          <picture>
-            <source srcset="/images/logo-dark.png" media="(prefers-color-scheme: dark)">
-            <img src="/images/logo.png" alt="Red Rock Tower Ltd" width="400" height="418" fetchpriority="high">
-          </picture>
+          <img src="/images/logo.svg" alt="Red Rock Tower Ltd" width="400" height="418" fetchpriority="high">
         </div>
       </div>
     </div>
@@ -287,7 +286,7 @@
 
 <footer>
   <div class="wrap foot">
-    <img src="/images/mark.png" alt="" width="238" height="278">
+    <img src="/images/mark.svg" alt="" width="56" height="56">
     <div>
       <p>© 2026 Red Rock Tower Limited. Registered in Ireland, company number 815834. Registered office: Unit 2, 2 Bridge Street, Athlone, Co. Westmeath, N37 F1W4.</p>
       <p>This site sets no cookies and runs no analytics scripts. It is served by Cloudflare, which keeps aggregate traffic statistics. Bosca Expenses has its own <a href="https://bosca.app/privacy">privacy policy</a> and <a href="https://bosca.app/terms">terms</a>.</p>
